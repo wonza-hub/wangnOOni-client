@@ -27,6 +27,7 @@ export const usePostDriverAction = () => {
           headers: {
             "Content-Type": "multipart/form-data",
           },
+          signal: AbortSignal.timeout(3000),
         })
         .then((res) => {
           return res.data;
